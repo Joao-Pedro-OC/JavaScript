@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRINGO É RUIM</title>
+</head>
+
+<body>
+    <h1>Em que país você nasceu?</h1>
+    <p>Eu nasci no/a <input type="text" name="pais" id="pais"></p>
+    <input type="button" value="Enviar" onclick="verificadorNacionalidade()">
+    <div id="res"></div>
+
+    <script>
+        function verificadorNacionalidade() {
+            var res = document.getElementById('res')
+            var pais = document.getElementById('pais')
+            var nacionalidade = pais.value
+            res.innerHTML = `Vivendo em ${nacionalidade} `
+            if (nacionalidade != `Brasil`) {
+                res.innerHTML += `você é <strong>GRINGO!</strong>`
+            } else {
+                res.innerHTML += `você é <strong>BRASILEIRO!</strong>`
+            }
+        }
+    </script>
+</body>
+
+</html>
